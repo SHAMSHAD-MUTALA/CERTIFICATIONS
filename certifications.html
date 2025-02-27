@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERTIFICATIONS - My Portfolio</title>
+    <meta name="description" content="Showcasing my certifications and internships.">
+    <meta name="keywords" content="certifications, internships, portfolio, web development">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eaeaea; /* Updated to a more pleasant color */
+            color: #444; /* Updated to a darker shade for better contrast */
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            text-align: left;
+            margin-top: 40px;
+        }
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .certificate {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .certificate:hover {
+            transform: scale(1.05);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .additional-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.innerHTML = `
+                <div style="position: relative; max-width: 90%; max-height: 90%;">
+                    <img src="./${imageSrc}" style="max-width: 90vw; max-height: 90vh; border-radius: 8px;">
+                    <button onclick="document.body.removeChild(this.parentElement.parentElement)" 
+                        style="position: absolute; top: 10px; right: 10px; background: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+    </script>
+</head>
+<body>
+    <h1>CERTIFICATIONS</h1>
+    
+    <h2>INTERNSHIPS</h2>
+    <div class="certificates">
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Teachnook internship certificate.jpg')"><img src="CERTIFICATES_JPG/Teachnook internship certificate.jpg" alt="Teachnook Internship - Embedded Systems Internship"><p><b>EMBEDDED SYSTEMS INTERNSHIP</b></p>
+
+        </div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Coursera certification.jpg')"><img src="CERTIFICATES_JPG/Coursera certification.jpg" alt="Coursera Certification - Google Data Analytics"><p><b>GOOGLE DATA ANALYTICS</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Cisco virtual internship .jpg')"><img src="CERTIFICATES_JPG/Cisco virtual internship .jpg" alt="Cisco Virtual Internship - AICTE CISCO VIRTUAL INTERNSHIP"><p><b>AICTE CISCO VIRTUAL INTERNSHIP</b></p></div>
+
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+    </div>
+    <div class="certificates">
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/SACL Internship certificate.jpg')"><img src="CERTIFICATES_JPG/SACL Internship certificate.jpg" alt="SACL Internship - SACL INTERNSHIP"><p><b>SACL INTERNSHIP</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP.jpg')"><img src="CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP.jpg" alt="AI ML Innovate Internship"><p><b>INNOVATE AI/ML INTERNSHIP</b></p></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+    </div>
+    
+    <h2>PROJECTS</h2>
+    <div class="certificates">
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP.jpg')"><img src="CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP.jpg" alt="AI ML Innovate Internship"><p><b>INNOVATE AI/ML INTERNSHIP</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP_OFFERLETTER.jpg')"><img src="CERTIFICATES_JPG/AI_ML_INNOVATE_INTERNSHIP_OFFERLETTER.jpg" alt="AI ML Innovate Internship Offer Letter - AI/ML OFFERLETTER"><p><b>AI/ML OFFERLETTER</b></p></div>
+
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" style="visibility:hidden;"></div>
+    </div>
+
+    <h2>COURSES & CERTIFICATIONS</h2>
+    <h3 style="font-size: 12px;">Minimal Text Size Header</h3>
+
+    <div class="certificates">
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/ETHICS.jpg')"><img src="CERTIFICATES_JPG/ETHICS.jpg" alt="Ethics - ETHICS IN ENGINEERING PRACTICE"><p><b>ETHICS IN ENGINEERING PRACTICE</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/CN.jpg')"><img src="CERTIFICATES_JPG/CN.jpg" alt="Computer Networks - COMPUTER NETWORKS"><p><b>COMPUTER NETWORKS</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/CNIP.jpg')"><img src="CERTIFICATES_JPG/CNIP.jpg" alt="CNIP - COMPUTER NETWORKS & INTERNET PROTOCOL"><p><b>COMPUTER NETWORKS & INTERNET PROTOCOL</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/NPTEL_MIS.jpg')"><img src="CERTIFICATES_JPG/NPTEL_MIS.jpg" alt="NPTEL MIS - MANAGEMENT INFORMATION SYSTEM"><p><b>MANAGEMENT INFORMATION SYSTEM</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/MICROSOFT_AZURE_FUNDAMENTALS.jpg')"><img src="CERTIFICATES_JPG/MICROSOFT_AZURE_FUNDAMENTALS.jpg" alt="Microsoft Azure - MICROSOFT AZURE FUNDAMENTALS"><p><b>MICROSOFT AZURE FUNDAMENTALS</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Python course.jpg')"><img src="CERTIFICATES_JPG/Python course.jpg" alt="Python Course - UDEMY_PYTHON"><p><b>UDEMY_PYTHON</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/SHAMSHAD%20COURSERA.jpg')"><img src="CERTIFICATES_JPG/SHAMSHAD%20COURSERA.jpg" alt="Shamshad Coursera - GOOGLE FINANCE DATA ANALYST PROFESSIONAL CERTIFICATE"><p><b>GOOGLE FINANCE DATA ANALYST PROFESSIONAL CERTIFICATE</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/SIMPLILEARN_DATA_VISUALISATION.jpg')"><img src="CERTIFICATES_JPG/SIMPLILEARN_DATA_VISUALISATION.jpg" alt="Data Visualization - DATA VISUALIZATION"><p><b>DATA VISUALIZATION SIMPLILEARN</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Cloud%20computing_SIMPLILEARN.jpg')"><img src="CERTIFICATES_JPG/Cloud%20computing_SIMPLILEARN.jpg" alt="Cloud Computing - CLOUD COMPUTING"><p><b>CLOUD COMPUTING SIMPLILEARN</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/CCNA_200-301_NETWORK_FUNDAMENTALS%20ONLINE.jpg')"><img src="CERTIFICATES_JPG/CCNA_200-301_NETWORK_FUNDAMENTALS%20ONLINE.jpg" alt="CCNA Network Fundamentals - NETWORK FUNDAMENTALS"><p><b>NETWORK FUNDAMENTALS SIMPLILEARN</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Mahindra%20Employability%20Skill%20Program%20Certificate.jpg')"><img src="CERTIFICATES_JPG/Mahindra%20Employability%20Skill%20Program%20Certificate.jpg" alt="Mahindra Employability Skill Program - MAHINDRA EMPLOYABILITY SKILL PROGRAM"><p><b>MAHINDRA EMPLOYABILITY SKILL PROGRAM</b></p></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Rubicon.jpg')"><img src="CERTIFICATES_JPG/Rubicon.jpg" alt="Rubicon - RUBICON LIFESKILLS"><p><b>RUBICON LIFESKILLS</b></p></div>
+        
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/Django certificate.jpg')"><img src="CERTIFICATES_JPG/Django certificate.jpg" alt="Django Certificate - DJANGO CERTIFICATION"><p><b>DJANGO CERTIFICATION</b></p></div>
+
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/AI Certificate .jpg')"><img src="CERTIFICATES_JPG/AI Certificate .jpg" alt="AI Certificate - AI_CERTIFICATION"><p><b>AI_CERTIFICATION</b></p></div>
+
+        <div class="certificate" style="visibility:hidden;"></div>
+        <div class="certificate" onclick="openModal('CERTIFICATES_JPG/NPTEL_MEMO.jpg')"><img src="CERTIFICATES_JPG/NPTEL_MEMO.jpg" alt="NPTEL Memo - NPTEL_MARKS_MEMO"><p><b>NPTEL_MARKS_MEMO</b></p></div>
+
+    </div>
+</body>
+</html>

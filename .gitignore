@@ -1,0 +1,16 @@
+# Ignore system and unnecessary files
+*.exe
+*.lnk
+*.ini
+*.dat
+*.log
+*.zip
+*.pdf
+*.docx
+*.png
+*.jpg
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+
