@@ -28,34 +28,78 @@
             text-align: left;
             margin-top: 40px;
         }
-        .education-certificates {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-        .internship-certificates {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-        .project-certificates {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
+        .education-certificates,
+        .internship-certificates,
+        .project-certificates,
         .course-certificates {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             padding: 20px;
             justify-content: center;
         }
+
+        /* Mobile first approach */
+        .education-certificates {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .internship-certificates {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .project-certificates {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .course-certificates {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        /* Tablet screens */
+        @media (min-width: 600px) {
+            .education-certificates {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .internship-certificates {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .project-certificates {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .course-certificates {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Laptop screens */
+        @media (min-width: 900px) {
+            .education-certificates {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .internship-certificates {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .project-certificates {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .course-certificates {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop screens */
+        @media (min-width: 1200px) {
+            .education-certificates {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            .internship-certificates {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .project-certificates {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .course-certificates {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
         .certificate {
             background: #fff;
             border-radius: 8px;
@@ -64,7 +108,20 @@
             padding: 15px;
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
+            margin: 10px;
         }
+
+        /* Responsive typography */
+        h1 {
+            font-size: clamp(24px, 5vw, 32px);
+        }
+        h2 {
+            font-size: clamp(18px, 4vw, 24px);
+        }
+        p {
+            font-size: clamp(12px, 3vw, 16px);
+        }
+
         .certificate:hover {
             transform: scale(1.05);
         }
@@ -72,7 +129,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-            border: 1px solid #ddd;
+            border: 1px solid #270e0e;
         }
         .additional-info {
             text-align: center;
@@ -191,6 +248,7 @@
     </div>
 
     <h2>COURSES & CERTIFICATIONS</h2>
+    <h3 style="font-size: 12px;">Minimal Text Size Header</h3>
     <div class="course-certificates">
         <div class="certificate" onclick="openModal('https://raw.githubusercontent.com/SHAMSHAD-MUTALA/MY-PORTFOLIO/master/assets/ETHICS.jpg')">
             <img src="https://raw.githubusercontent.com/SHAMSHAD-MUTALA/MY-PORTFOLIO/master/assets/ETHICS.jpg" alt="Ethics - ETHICS IN ENGINEERING PRACTICE">
